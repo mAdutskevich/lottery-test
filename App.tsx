@@ -12,8 +12,8 @@ import {
 import 'react-native-gesture-handler';
 import { registerRootComponent } from 'expo';
 import { useColorScheme } from 'react-native';
-import { StackNavigation } from '@/navigation';
-import { EPreferredColorScheme } from '@/enums';
+import { StackNavigation } from './src/navigation';
+import { EPreferredColorScheme } from './src/enums';
 
 preventShowSplashScreen();
 setSplachScreenOptions({
