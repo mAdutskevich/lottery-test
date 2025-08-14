@@ -1,7 +1,4 @@
 export const typography = {
-  fontFamily: {
-    inter: 'Inter',
-  },
   weight: {
     regular: '400',
     medium: '500',

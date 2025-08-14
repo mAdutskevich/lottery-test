@@ -82,4 +82,5 @@ run: `npm run expo-doctor`
 2. Local images are not supported by Expo Snack, but they are included in the
    app, because it's possible to extract the image URLs from the GitHub repo and
    use them in the project(Header component).
-3. Tests are not used in the project for simplicity.
+3. Tests are not included in the project to keep things simple.
+4. The app uses the default platform font family for simplicity.
