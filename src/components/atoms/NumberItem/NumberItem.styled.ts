@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { theme } from '../../../themes';
 import { horizontalScale } from '../../../utils';
+import type { TFontWeight } from '../../../types';
 
 const NUMBER_HEIGHT = 48;
 const INNER_CONTAINER_HEIGHT = 36;
@@ -30,7 +31,7 @@ export const styles = StyleSheet.create({
   },
   text: {
     fontSize: horizontalScale(theme.typography.size.s18),
-    fontWeight: 'bold',
+    fontWeight: theme.typography.weight.bold as TFontWeight,
     color: theme.palette.BLACK,
   },
 });

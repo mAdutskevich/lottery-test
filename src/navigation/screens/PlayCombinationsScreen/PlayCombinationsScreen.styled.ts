@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { theme } from '../../../themes';
+import type { TFontWeight } from '../../../types';
 import { BUTTON_HEIGHT } from '../../../components';
 import { horizontalScale, verticalScale } from '../../../utils';
 
@@ -29,14 +30,14 @@ export const styles = StyleSheet.create({
   },
   emptyTitle: {
     color: theme.palette.WHITE,
-    fontWeight: 'bold',
+    fontWeight: theme.typography.weight.bold as TFontWeight,
     fontSize: horizontalScale(theme.typography.size.s20),
     textAlign: 'center',
   },
   emptyText: {
     marginTop: verticalScale(theme.spacing.s12),
     color: theme.palette.WHITE,
-    fontWeight: 'normal',
+    fontWeight: theme.typography.weight.regular as TFontWeight,
     fontSize: horizontalScale(theme.typography.size.s18),
     textAlign: 'center',
   },

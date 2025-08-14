@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { theme } from '../../../themes';
 import { horizontalScale } from '../../../utils';
+import type { TFontWeight } from '../../../types';
 
 export const BUTTON_HEIGHT = 44;
 
@@ -25,7 +26,7 @@ export const styles = StyleSheet.create({
   },
   text: {
     fontSize: horizontalScale(theme.typography.size.s18),
-    fontWeight: 'bold',
+    fontWeight: theme.typography.weight.bold as TFontWeight,
   },
   outlinedText: {
     color: theme.palette.WHITE,

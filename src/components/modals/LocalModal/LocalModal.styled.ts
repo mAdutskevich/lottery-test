@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { theme } from '../../../themes';
 import { horizontalScale } from '../../../utils';
+import type { TFontWeight } from '../../../types';
 
 export const styles = StyleSheet.create({
   container: {
@@ -23,7 +24,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     color: theme.palette.BLACK,
-    fontWeight: 'bold',
+    fontWeight: theme.typography.weight.bold as TFontWeight,
     textAlign: 'center',
     fontSize: horizontalScale(theme.typography.size.s18),
   },

@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { theme } from '../../../themes';
+import type { TFontWeight } from '../../../types';
 import { horizontalScale, verticalScale } from '../../../utils';
 
 const HEADER_HEIGHT = 142;
@@ -17,7 +18,7 @@ export const styles = StyleSheet.create({
   },
   text: {
     fontSize: horizontalScale(theme.typography.size.s22),
-    fontWeight: 'bold',
+    fontWeight: theme.typography.weight.bold as TFontWeight,
     color: theme.palette.WHITE,
     marginBottom: theme.spacing.s12,
     marginRight: horizontalScale(theme.spacing.s20),

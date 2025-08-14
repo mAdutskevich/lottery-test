@@ -13,17 +13,14 @@ import {
   EButtonVariant,
 } from '../../../components';
 import { useCombinationsStore } from '../../../store';
-import { MAX_AMOUNT_OF_COMBINATIONS } from '../../../constants';
+import {
+  EMPTY_COMBINATION,
+  MAX_AMOUNT_OF_COMBINATIONS,
+} from '../../../constants';
 import type { TCombination, TStackNavigationParamList } from '../../../types';
 import { useGetNumbers } from './hooks';
 import { styles } from './NumberPickerScreen.styled';
-
-const EMPTY_COMBINATION: TCombination = ['', '', '', '', ''];
-const EMPTY_MODAL_STATUS = {
-  isModalVisible: false,
-  title: '',
-  description: '',
-};
+import { EMPTY_MODAL_STATUS } from './NumberPickerScreen.constants';
 
 export const NumberPickerScreen = () => {
   const insets = useSafeAreaInsets();
