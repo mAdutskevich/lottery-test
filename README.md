@@ -88,4 +88,10 @@ run: `npm run expo-doctor`
    use them in the project(Header component).
 3. Tests are not included in the project to keep things simple.
 4. The app uses the default platform font family for simplicity.
-5. The app includes several validations that are not in the task.
+5. The app includes several additional features:
+
+- You can unselect numbers both in the number list and in the selected
+  combination block on the `NumberPickerScreen`.
+- The app includes validations for incomplete combinations, a maximum
+  combination limit (3), duplicate combinations, and attempts to add more than 5
+  numbers to a combination.
