@@ -12,13 +12,15 @@ import {
   SafeAreaLayout,
   EButtonVariant,
 } from '../../../components';
+import {
+  EMPTY_COMBINATION,
+  MAX_AMOUNT_OF_COMBINATIONS,
+} from '../../../constants';
 import { useCombinationsStore } from '../../../store';
-import { MAX_AMOUNT_OF_COMBINATIONS } from '../../../constants';
 import type { TCombination, TStackNavigationParamList } from '../../../types';
 import { useGetNumbers } from './hooks';
 import { styles } from './NumberPickerScreen.styled';
 
-const EMPTY_COMBINATION: TCombination = ['', '', '', '', ''];
 const EMPTY_MODAL_STATUS = {
   isModalVisible: false,
   title: '',
@@ -152,25 +154,7 @@ export const NumberPickerScreen = () => {
                 const addCombination =
                   useCombinationsStore.getState().addCombination;
 
-                const isCombinationExists = combinations.some(
-                  combination =>
-                    combination.join('') === selectedCombination.join(''),
-                );
-
-                if (isCombinationExists) {
-                  setModalStatus({
-                    isModalVisible: true,
-                    title: 'Combination Exists',
-                    description: 'This combination has already been added.',
-                  });
-
-                  return;
-                }
-
-                const isCombinationsLimitReached =
-                  combinations.length >= MAX_AMOUNT_OF_COMBINATIONS;
-
-                if (isCombinationsLimitReached) {
+                if (combinations.length >= MAX_AMOUNT_OF_COMBINATIONS) {
                   setModalStatus({
                     isModalVisible: true,
                     title: 'Max Combinations Reached',

@@ -12,8 +12,9 @@ export const Combination = ({
   withRemoveButton = false,
   onNumberPress,
   onRemove,
+  style,
 }: TCombinationProps) => (
-  <View style={[styles.container, noBorder && styles.noBorder]}>
+  <View style={[styles.container, noBorder && styles.noBorder, style]}>
     {combination.map((item, index) => (
       <NumberItem
         key={index}

@@ -21,6 +21,25 @@ export const styles = StyleSheet.create({
     paddingLeft: horizontalScale(theme.spacing.s16),
     paddingRight: horizontalScale(theme.spacing.s16),
   },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: horizontalScale(theme.spacing.s16),
+  },
+  emptyTitle: {
+    color: theme.palette.WHITE,
+    fontWeight: 'bold',
+    fontSize: horizontalScale(theme.typography.size.s20),
+    textAlign: 'center',
+  },
+  emptyText: {
+    marginTop: verticalScale(theme.spacing.s12),
+    color: theme.palette.WHITE,
+    fontWeight: 'normal',
+    fontSize: horizontalScale(theme.typography.size.s18),
+    textAlign: 'center',
+  },
   iconButton: {
     position: 'absolute',
     top: -(horizontalScale(BUTTON_HEIGHT) + verticalScale(theme.spacing.s20)),
@@ -33,5 +52,13 @@ export const styles = StyleSheet.create({
   buttonsContainer: {
     position: 'relative',
     padding: horizontalScale(theme.spacing.s16),
+  },
+  modalCombinationsContainer: {
+    width: '100%',
+    marginTop: horizontalScale(theme.spacing.s12),
+    justifyContent: 'flex-start',
+  },
+  modalCombination: {
+    padding: 0,
   },
 });
