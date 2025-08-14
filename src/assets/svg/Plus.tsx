@@ -1,7 +1,7 @@
 import Svg, { Path } from 'react-native-svg';
-import type { TIcon } from 'src/types';
-import { EIconRotation } from 'src/enums';
-import { horizontalScale } from 'src/utils';
+import type { TIcon } from '../../types';
+import { EIconRotation } from '../../enums';
+import { horizontalScale } from '../../utils';
 
 export const Plus = ({
   stroke,

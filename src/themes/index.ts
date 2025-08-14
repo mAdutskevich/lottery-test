@@ -4,7 +4,7 @@ import { typography } from './typography';
 import { attributes } from './attributes';
 import { lightPalette } from './palette';
 
-export const lightTheme: TTheme = {
+export const theme: TTheme = {
   palette: lightPalette,
   typography,
   spacing,

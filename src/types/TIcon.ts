@@ -1,4 +1,4 @@
-import { EIconRotation } from 'src/enums';
+import { EIconRotation } from '../enums';
 
 export type TIcon = {
   stroke?: string;

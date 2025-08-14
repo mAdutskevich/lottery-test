@@ -1,5 +1,5 @@
 import { Dimensions } from 'react-native';
-import { DEFAULT_SCREEN_HEIGHT } from 'src/constants';
+import { DEFAULT_SCREEN_HEIGHT } from '../constants';
 
 const { height } = Dimensions.get('window');
 

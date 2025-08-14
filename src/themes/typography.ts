@@ -3,10 +3,10 @@ export const typography = {
     inter: 'Inter',
   },
   weight: {
-    regular: 400,
-    medium: 500,
-    semiBold: 600,
-    bold: 700,
+    regular: '400',
+    medium: '500',
+    semiBold: '600',
+    bold: '700',
   },
   size: {
     s6: 6,

@@ -4,7 +4,3 @@ export type TCombinationProps = {
   withRemoveButton?: boolean;
   onRemove?: () => void;
 };
-
-export type TContainerStyled = {
-  noBorder?: boolean;
-};

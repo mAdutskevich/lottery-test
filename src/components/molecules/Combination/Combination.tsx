@@ -1,33 +1,30 @@
-import { useTheme } from 'styled-components/native';
-import { Close } from 'src/assets';
-import { horizontalScale } from 'src/utils';
-import { NumberItem } from 'src/components/atoms';
+import { Pressable, View } from 'react-native';
+import { Close } from '../../../assets';
+import { theme } from '../../../themes';
+import { NumberItem } from '../../atoms';
+import { horizontalScale } from '../../../utils';
+import { styles } from './Combination.styled';
 import type { TCombinationProps } from './Combination.types';
-import { Container, RemoveButtonPressable } from './Combination.styled';
 
 export const Combination = ({
   combination,
   noBorder = false,
   withRemoveButton = false,
   onRemove,
-}: TCombinationProps) => {
-  const theme = useTheme();
+}: TCombinationProps) => (
+  <View style={[styles.container, noBorder && styles.noBorder]}>
+    {combination.map((item, index) => (
+      <NumberItem key={index} text="66" />
+    ))}
 
-  return (
-    <Container noBorder={noBorder}>
-      {combination.map((item, index) => {
-        return <NumberItem key={index} text="66" />;
-      })}
-
-      {withRemoveButton && (
-        <RemoveButtonPressable onPress={onRemove}>
-          <Close
-            width={horizontalScale(theme.spacing.s16)}
-            height={horizontalScale(theme.spacing.s16)}
-            stroke={theme.palette.SECONDARY}
-          />
-        </RemoveButtonPressable>
-      )}
-    </Container>
-  );
-};
+    {withRemoveButton && (
+      <Pressable style={[styles.removeButtonPressable]} onPress={onRemove}>
+        <Close
+          width={horizontalScale(theme.spacing.s16)}
+          height={horizontalScale(theme.spacing.s16)}
+          stroke={theme.palette.SECONDARY}
+        />
+      </Pressable>
+    )}
+  </View>
+);

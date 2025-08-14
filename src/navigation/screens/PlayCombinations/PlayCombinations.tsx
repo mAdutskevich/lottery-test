@@ -1,19 +1,31 @@
-import { useTheme } from 'styled-components/native';
+import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Plus } from 'src/assets';
-import { horizontalScale } from 'src/utils';
-import { Button, Header, NumberItem, Combination } from 'src/components';
-import { Content, IconButton, SafeAreaLayout } from './PlayCombinations.styled';
+import { Plus } from '../../../assets';
+import { theme } from '../../../themes';
+import {
+  Button,
+  Header,
+  IconButton,
+  NumberItem,
+  Combination,
+  SafeAreaLayout,
+} from '../../../components';
+import { horizontalScale } from '../../../utils';
+import { styles } from './PlayCombinations.styled';
 
 export const PlayCombinations = () => {
-  const theme = useTheme();
   const insets = useSafeAreaInsets();
 
   return (
-    <SafeAreaLayout>
+    <SafeAreaLayout style={styles.safeAreaLayout}>
       <Header title="Your Combinations" />
 
-      <Content insets={insets}>
+      <View
+        style={{
+          ...styles.content,
+          paddingBottom: insets.bottom,
+        }}
+      >
         <Button
           text="Purchase"
           onPress={() => {
@@ -29,6 +41,7 @@ export const PlayCombinations = () => {
         />
 
         <IconButton
+          style={styles.iconButton}
           icon={
             <Plus
               fill={theme.palette.WHITE}
@@ -38,7 +51,7 @@ export const PlayCombinations = () => {
           }
           onPress={() => console.log('Icon Button Pressed')}
         />
-      </Content>
+      </View>
     </SafeAreaLayout>
   );
 };

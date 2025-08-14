@@ -1,5 +1,5 @@
 import { Dimensions } from 'react-native';
-import { DEFAULT_SCREEN_WIDTH } from 'src/constants';
+import { DEFAULT_SCREEN_WIDTH } from '../constants';
 
 const { width } = Dimensions.get('window');
 

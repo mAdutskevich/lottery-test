@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { EStackNavigationScreens } from 'src/enums';
-import type { TStackNavigationParamList } from 'src/types';
+import { EStackNavigationScreens } from '../../enums';
+import type { TStackNavigationParamList } from '../../types';
 import { NumberPickerScreen, PlayCombinations } from '../screens';
 
 const StackNavigator = createStackNavigator<TStackNavigationParamList>();

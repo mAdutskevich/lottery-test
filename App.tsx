@@ -6,9 +6,7 @@ import {
 import '@expo/metro-runtime';
 import 'react-native-gesture-handler';
 import { registerRootComponent } from 'expo';
-import { ThemeProvider } from 'styled-components/native';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
-import { lightTheme } from './src/themes';
 import { StackNavigation } from './src/navigation';
 
 preventShowSplashScreen();
@@ -19,11 +17,9 @@ setSplachScreenOptions({
 
 export default function App() {
   return (
-    <ThemeProvider theme={lightTheme}>
-      <NavigationContainer theme={DefaultTheme} onReady={hideSplashScreen}>
-        <StackNavigation />
-      </NavigationContainer>
-    </ThemeProvider>
+    <NavigationContainer theme={DefaultTheme} onReady={hideSplashScreen}>
+      <StackNavigation />
+    </NavigationContainer>
   );
 }
 
