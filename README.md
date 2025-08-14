@@ -88,3 +88,4 @@ run: `npm run expo-doctor`
    use them in the project(Header component).
 3. Tests are not included in the project to keep things simple.
 4. The app uses the default platform font family for simplicity.
+5. The app includes several validations that are not in the task.
