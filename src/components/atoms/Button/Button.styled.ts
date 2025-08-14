@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 import { theme } from '../../../themes';
 import { horizontalScale } from '../../../utils';
 
-const BUTTON_HEIGHT = 44;
+export const BUTTON_HEIGHT = 44;
 
 export const styles = StyleSheet.create({
   pressable: {
@@ -12,6 +12,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: horizontalScale(8),
     backgroundColor: theme.palette.PRIMARY,
+  },
+  pressed: {
+    opacity: 0.85,
   },
   text: {
     fontSize: horizontalScale(theme.typography.size.s18),

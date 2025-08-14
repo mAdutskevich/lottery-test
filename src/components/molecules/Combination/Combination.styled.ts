@@ -21,6 +21,9 @@ export const styles = StyleSheet.create({
     borderColor: 'transparent',
     backgroundColor: 'transparent',
   },
+  pressed: {
+    opacity: 0.85,
+  },
   removeButtonPressable: {
     position: 'absolute',
     top: -horizontalScale(theme.spacing.s12),

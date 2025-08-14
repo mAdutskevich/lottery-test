@@ -6,4 +6,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: '50%',
   },
+  pressed: {
+    opacity: 0.7,
+  },
 });

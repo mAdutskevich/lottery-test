@@ -3,7 +3,14 @@ import { styles } from './Button.styled';
 import type { TButtonProps } from './Button.types';
 
 export const Button = ({ text, style, ...props }: TButtonProps) => (
-  <Pressable style={[styles.pressable, style]} {...props}>
+  <Pressable
+    style={({ pressed }) => [
+      styles.pressable,
+      style,
+      pressed && styles.pressed,
+    ]}
+    {...props}
+  >
     <Text style={styles.text}>{text}</Text>
   </Pressable>
 );

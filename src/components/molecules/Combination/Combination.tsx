@@ -14,11 +14,17 @@ export const Combination = ({
 }: TCombinationProps) => (
   <View style={[styles.container, noBorder && styles.noBorder]}>
     {combination.map((item, index) => (
-      <NumberItem key={index} text="66" />
+      <NumberItem key={index} text={item} />
     ))}
 
     {withRemoveButton && (
-      <Pressable style={[styles.removeButtonPressable]} onPress={onRemove}>
+      <Pressable
+        style={({ pressed }) => [
+          styles.removeButtonPressable,
+          pressed && styles.pressed,
+        ]}
+        onPress={onRemove}
+      >
         <Close
           width={horizontalScale(theme.spacing.s16)}
           height={horizontalScale(theme.spacing.s16)}
