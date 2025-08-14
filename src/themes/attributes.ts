@@ -1,0 +1,32 @@
+export const attributes = {
+  borderRadius: {
+    s2: 2,
+    s4: 4,
+    s6: 6,
+    s8: 8,
+    s10: 10,
+    s12: 12,
+    s14: 14,
+    s16: 16,
+    s18: 18,
+    s20: 20,
+    s24: 24,
+    s28: 28,
+    s32: 32,
+  },
+  borderWidth: {
+    s1: 1,
+    s2: 2,
+    s3: 3,
+    s4: 4,
+    s5: 5,
+  },
+  zIndex: {
+    zBelowBase: -1,
+    zBase: 1,
+    zAboveBase: 10,
+    zDropdown: 100,
+    zPopup: 110,
+    zMaximum: 1000,
+  },
+};

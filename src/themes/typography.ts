@@ -1,0 +1,33 @@
+export const typography = {
+  fontFamily: {
+    inter: 'Inter',
+  },
+  weight: {
+    regular: 400,
+    medium: 500,
+    semiBold: 600,
+    bold: 700,
+  },
+  size: {
+    s6: 6,
+    s8: 8,
+    s10: 10,
+    s12: 12,
+    s14: 14,
+    s16: 16,
+    s18: 18,
+    s20: 20,
+    s22: 22,
+    s24: 24,
+    s28: 28,
+    s32: 32,
+    s36: 36,
+    s40: 40,
+    s44: 44,
+    s48: 48,
+    s52: 52,
+    s56: 56,
+    s60: 60,
+    s80: 80,
+  },
+};

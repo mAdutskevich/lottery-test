@@ -1,2 +1,2 @@
-export * from './EPreferredColorScheme';
+export * from './EIconRotation';
 export * from './EStackNavigationScreens';
