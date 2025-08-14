@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { EStackNavigationScreens } from '../../enums';
 import type { TStackNavigationParamList } from '../../types';
-import { NumberPickerScreen, PlayCombinations } from '../screens';
+import { NumberPickerScreen, PlayCombinationsScreen } from '../screens';
 
 const StackNavigator = createStackNavigator<TStackNavigationParamList>();
 
@@ -15,7 +15,7 @@ export const StackNavigation = () => {
     >
       <StackNavigator.Screen
         name={EStackNavigationScreens.PlayCombinations}
-        component={PlayCombinations}
+        component={PlayCombinationsScreen}
       />
 
       <StackNavigator.Screen

@@ -15,12 +15,13 @@ import { horizontalScale } from '../../../utils';
 import { useCombinationsStore } from '../../../store';
 import { EStackNavigationScreens } from '../../../enums';
 import { TStackNavigationParamList } from '../../../types';
-import { styles } from './PlayCombinations.styled';
+import { styles } from './PlayCombinationsScreen.styled';
 
-export const PlayCombinations = () => {
+export const PlayCombinationsScreen = () => {
   const insets = useSafeAreaInsets();
   const navigation =
     useNavigation<StackNavigationProp<TStackNavigationParamList>>();
+
   const { combinations, removeCombination } = useCombinationsStore();
 
   return (
