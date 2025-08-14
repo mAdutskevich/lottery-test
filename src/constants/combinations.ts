@@ -1,4 +1,4 @@
-import type { TCombination } from 'src/types';
+import type { TCombination } from '../types';
 
 export const EMPTY_COMBINATION: TCombination = ['', '', '', '', ''];
 
