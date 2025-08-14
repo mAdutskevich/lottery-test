@@ -75,6 +75,10 @@ run: `npm run expo-doctor`
   screen, use the `useSafeAreaInsets` hook from the
   `react-native-safe-area-context` library, following React Navigation best
   practices.
+- To ensure the app looks good on different devices, all sizes are managed using
+  scaling functions.
+- The theme includes most of the attributes needed for development. All sizes
+  follow a 4px step, except for smaller sizes.
 
 ## Notes
 
